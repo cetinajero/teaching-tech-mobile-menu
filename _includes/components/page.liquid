@@ -8,7 +8,7 @@
   %}
 
   <div role="main" class="ui-content">
-    <p>{{ site.data.pages[page].body }}</p>
+    <div>{{ site.data.pages[page].body }}</div>
 
     {% if site.data.pages[page].subpage %}
       {% include components/buttons/subpage.liquid %}

@@ -3,7 +3,7 @@
   {% include components/header.liquid title=site.title %}
 
   <div role="main" class="ui-content">
-    <p>{{ site.description }}</p>
+    <div>{{ site.description }}</div>
 
     {% for page in page.pages %}
       {% include components/buttons/nav-item.liquid %}

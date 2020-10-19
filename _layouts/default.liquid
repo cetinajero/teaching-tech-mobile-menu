@@ -9,7 +9,7 @@
 
     {% include components/menu.liquid %}
 
-    {% for page in page.pages %}
+    {% for page in site.data.pages %}
       {% include components/page.liquid %}
     {% endfor %}
 

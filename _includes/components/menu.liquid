@@ -5,7 +5,7 @@
   <div role="main" class="ui-content">
     <div>{{ site.description }}</div>
 
-    {% for page in page.pages %}
+    {% for page in site.data.pages %}
       {% include components/buttons/nav-item.liquid %}
     {% endfor %}
   </div>

@@ -1,16 +1,15 @@
-<div data-role="page" id="{{ page | downcase | url_encode }}">
-  {% assign title = site.data.pages[page].title %}
+<div data-role="page" id="{{ page.first | downcase | url_encode }}">
 
   {% include components/panel.liquid %}
   {% include components/header.liquid 
-     title=title
+     title=page.last.title
      parent="menu"
   %}
 
   <div role="main" class="ui-content">
-    <div>{{ site.data.pages[page].body }}</div>
+    <div>{{ page.last.body }}</div>
 
-    {% if site.data.pages[page].subpage %}
+    {% if page.last.subpage %}
       {% include components/buttons/subpage.liquid %}
     {% endif %}
   </div>
@@ -19,6 +18,6 @@
 
 </div>
 
-{% if site.data.pages[page].subpage %}
+{% if page.last.subpage %}
   {% include components/subpage.liquid %}
 {% endif %}

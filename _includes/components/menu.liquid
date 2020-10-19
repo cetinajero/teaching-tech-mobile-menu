@@ -5,7 +5,8 @@
   <div role="main" class="ui-content">
     <div>{{ site.description }}</div>
 
-    {% for page in site.data.pages %}
+    {% assign sorted_pages = site.data.pages | sort %}
+    {% for page in sorted_pages %}
       {% include components/buttons/nav-item.liquid %}
     {% endfor %}
   </div>
